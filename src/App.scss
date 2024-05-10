@@ -1,0 +1,93 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #c2c2d6;
+    user-select: none;
+    cursor: default;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#calculator{
+    width: 333.2px;
+    min-height: 393.2px;
+    height: fit-content;
+    background-color: black;
+    color: white;
+}
+
+#display{
+    padding-top: 5px;
+    min-height: 55px;
+    height: fit-content;
+    width: 98%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    #result{
+        color: orange;
+        font-size: 20px;
+        min-height: 20px;
+        height: fit-content;
+        word-wrap: break-word;
+        line-height: 20px;
+        vertical-align: text-top;
+        text-align: right;
+        width: 100%;
+    }
+    #operation{
+        height: 35px;
+        line-height: 35px;
+        color: white;
+        font-size: 20px;
+    }
+}
+
+#buttons{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,1fr);
+    height: 84%;
+    padding: 5px;
+    button{
+        height: 65px;
+        border: none;
+        outline: 1px solid black;
+        font-size: 20px;
+        color: white;
+    }
+
+    button:hover{
+        color: black;
+        outline: 0.05em solid grey;
+    }
+    #clear{
+        grid-column: 2 span;
+        background-color: rgb(172, 57, 57);
+    }
+    #zero {
+        grid-column: 2 span;
+        background-color: #4d4d4d;
+    }
+    #one,#two,#three,#four,#five,#six,#seven,#eight,#nine,#decimal{
+        background-color: #4d4d4d;
+    }
+    #equals {
+        grid-row: 2 span;
+        height: 100%;
+        background-color: rgb(0, 68, 102);
+    }
+    #divide, #multiply, #subtract, #add{
+        background-color: rgb(102, 102, 102);
+    }
+}
+
+#author{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    margin-top: 15px;
+}
